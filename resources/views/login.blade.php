@@ -44,7 +44,7 @@
       width:100px;
       background-color:#BAC9B8;
    }
-   .content{
+   .register{
       background-color:#E9F1E6;
    }
    .nav-menu-logo{
@@ -54,37 +54,6 @@
    .nav-menu-logo img{
       width:100px;
       height:100px;
-   }
-   .nav-manu-items li{
-      display:flex;
-      padding:20px;
-      width:;
-      height:90px;
-      list-style: none;
-      align-items: center;
-   }
-   .nav-manu-items li img{
-      width:50px;
-      height:50px;
-   }
-   .nav-manu-items li h3{
-      align-items:center;
-      margin-left:20px;
-      display:inline;
-      color:#585858;
-   }
-   .nav-manu-items li a:hover{
-      text-decoration:none;
-   }
-   .nav-manu-items li a{
-      display:flex;
-      align-items:center;
-   }
-   .nav-manu-items li:nth-child(1){
-      background-color:#3D5538;
-   }
-   .nav-manu-items li:nth-child(1) h3{
-      color:#F0F8FF;
    }
    .nav-manu-items li:hover,.nav-manu-items a h3:hover{
       background-color:#72916C;
@@ -98,31 +67,78 @@
       color:DodgerBlue;
       text-decoration:none;
    }
-   .content-header{
+   .register-header{
       height:100px;
       background-color:#BAC9B8;
       border-radius:10px;
       align-items:center;
    }
-   .content-header img{
+   .register-header img{
       height:70px;
       width:70px;
    }
-   .content-header h3{
+   .register-header h3{
       font-size:45px;
       color:#585858;
    }
-
-   .content-search-button{
+   .register-fill h4{
+      font-size:35px;
+      color:#585858;
+   }
+   .register-fill input{
+      background-color:#BAC9B8;
+      border:2px solid #3D5538;
+      border-radius:5px;
+      width:500px;
+      height:60px;
+      padding:0 15px;
+   }
+   .register-fill select{
+      width:200px;
+      height:60px;
+      background-color:#BAC9B8;
+      border:2px solid #3D5538;
+      border-radius:5px;
+      font-size:23px;
+      color:#3D5538;
+   }
+   .register-fill-items5 button{
+      width:220px;
+      height:60px;
+      border:none;
       background-color:#3D5538;
+      border-radius: 5px;
+      font-size:35px;
       color:#F0F8FF;
    }
-   .content-search{
-      justify-content:flex-end;
+   .register-fill-items5 button:hover{
+      background-color:#597154;
    }
-   .content-search form{
-      width:500px;
+   .register-fill-items5 a{
+      font-size:35px;
+      color:#F0F8FF;
    }
+   .register-fill-items5 a:hover{
+      text-decoration:none;
+      color:#F0F8FF;
+   }
+
+   ::placeholder{
+      font-size:23px;
+      color:#3D5538;
+   }
+   .register-sex option{
+      font-size:23px;
+   }
+   .register-question{
+      font-size:25px;
+   }
+   .register-fill input[type]{
+      font-size:23px;
+      color:#3D5538;
+   }
+
+   /********** start footer **********/
    .footer{
       background-color:#BAC9B8;
    }
@@ -155,31 +171,8 @@
       align-items:center;
       justify-content:space-between;
    }
-   .content-footer-bottom{
-      height:50px;
-      align-items:center;
-   }
-   .content-footer-bottom img{
-      width:50px;
-      height:50px;
-   }
-   .content-footer-bottom p {
-      margin:10px;
-      font-size:25px;
-      color:#585858;
-   }
-   .bottom-green{
-      width:45px;
-      height:45px;
-      border:3px solid green;
-      border-radius: 5px;
-   }
-   .bottom-orange{
-      width:45px;
-      height:45px;
-      border:3px solid orange;
-      border-radius: 5px;
-   }
+   /********** end footer **********/
+
 </style>
    
 <!---------- start header ---------->
@@ -215,54 +208,69 @@
          <div class="nav-menu col-3 p-0">
             <div class="nav-menu-logo d-flex justify-content-center align-items-center p-3"><img src="{{asset('img/menu-logo/online-booking.png')}}" alt=""><h3 class="ml-3 font-weight-bold">FTU RRS</h3>
             </div>
-            <ul class="nav-manu-items pl-3">
-               <li><a href="#"><img src="{{asset('img/menu-logo/calendar.png')}}" alt=""><h3>ปฎิทินการจองห้องประชุม</h3></a></li>
-               <li><a href="#"><img src="{{asset('img/menu-logo/booking.png')}}" alt=""><h3>ข้อมูลการจองห้องประชุม</h3></a></li>
-               <li><a href="#"><img src="{{asset('img/menu-logo/meeting-room.png')}}" alt=""><h3>รายการห้องประชุม</h3></a></li>
-               <li><a href="#"><img src="{{asset('img/menu-logo/about-us.png')}}" alt=""><h3>เกี่ยวกับเรา</h3></a></li>
-            </ul>
          </div>
-         <div class="content p-0 col-9">
-            <div class="content-container mx-5 my-4">
-               <div class="content-header d-flex">
-                  <div class="content-header-img ml-5">
-                     <img src="{{asset('img/menu-logo/calendar.png')}}" alt="">
+         <div class="register p-0 col-9">
+            <div class="register-container mx-5 my-4">
+               <div class="register-header d-flex">
+                  <div class="register-header-img ml-5">
+                     <img src="{{asset('img/menu-logo/users.png')}}" alt="">
                   </div>
-                  <div class="content-header-h ml-4">
-                     <h3>ปฏิทินการจองห้องประชุม</h3>
+                  <div class="register-header-h ml-4">
+                     <h3>สมัครสมาชิก</h3>
                   </div>
                </div>
-               <div class="content-search d-flex mt-5 mb-4">
-                  <form method="post" class="input-group">                  
-                     <select class="custom-select" id="">
-                        <option value="allbuilding" selected>อาคารทั้งหมด</option>
-                        <option value="scienceandit">วิทยาศาสตร์และเทคโนโลยี</option>
-                        <option value="arts">ศิลปศาสตร์และสังคมศาสตร์</option>
-                        <option value="education">ศึกษาศาสตร์</option>
-                        <option value="islamic">อิสลามศึกษา</option>
-                     </select>
-                     <button class="content-search-button px-2 rounded-right" type="submit">ค้นหา</button>
+               <div class="register-fill my-5">
+                  <form action="#" method="post">
+                     <div class="register-fill-items1 row">
+                        <div class="register-username col-6 mb-4">
+                           <h4>ชื่อผู้ใช้</h4>
+                           <input type="username" name="username" placeholder="Username" require>
+                        </div>
+                        <div class="register-password col-6">
+                           <h4>รหัสผ่าน</h4>
+                           <input type="password" name="password" placeholder="Password" require>
+                        </div>
+                     </div>
+                     <div class="register-fill-items2 row mb-4">
+                        <div class="register-cpassword col-6">
+                           <h4>ยืนยันรหัสผ่าน</h4>
+                           <input type="password" name="confirmpassword" placeholder="Confirm Password" require>
+                        </div>
+                        <div class="register-name col-6">
+                           <h4>ชื่อ-นามสกุล</h4>
+                           <input type="text" name="name" placeholder="ชื่อ - นามสกุล" require>
+                        </div>
+                     </div>
+                     <div class="register-fill-items3 row mb-4">
+                        <div class="register-sex col-6">
+                           <h4>เพศ</h4>
+                           <select name="sex" class="pl-2" require>
+                              <option select>เลือก</option>
+                              <option value="male">ชาย</option>
+                              <option value="female">หญิง</option>
+                           </select>
+                        </div>
+                        <div class="register-email col-6">
+                           <h4>อีเมล</h4>
+                           <input type="email" name="email" placeholder="อีเมล" require>
+                        </div>
+                     </div>
+                     <div class="register-fill-items4 row mb-5">
+                        <div class="register-phone col">
+                           <h4>เบอร์โทร</h4>
+                           <input type="text" name="phone" placeholder="เบอร์โทรศัพท์" require>
+                        </div>
+                     </div>
+                     <div class="register-fill-items5 mb-5 d-flex">
+                        <button type="submit">สมัคร</button>
+                        <button class="bg-danger ml-3"><a href="#">ยกเลิก</a></button>
+                     </div>
                   </form>
+                  <span class="register-question">สมัครสมาชิกแล้ว? <a href="#">เข้าสู่ระบบ</a></span>
                </div>
-               <div class="content-table bg-dark">
-               </div>
-               <div class="content-footer row">
-                  <div class="content-footer-top">
-                     <div class="content-footer-left col-7">
-                     </div>
-                     <div class="content-footer-right col-5">
-                     </div>
-                  </div>
-                  <div class="content-footer-bottom d-flex">
-                     <img src="{{asset('img/menu-logo/color-wheel.png')}}" alt="">
-                     <p>สีสถานะห้องประชุม</p>
-                     <div class="bottom-green bg-success"></div>
-                     <p>อนุมัติ</p>
-                     <div class="bottom-orange bg-warning"></div>
-                     <p>รออนุมัติ</p>
-                  </div>
-               </div>
+               
             </div>
+
          </div>
       </div>   
 @endsection

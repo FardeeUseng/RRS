@@ -24,3 +24,11 @@ Route::get('/master', function(){
 Route::get('/index', function(){
     return view('index');
 });
+
+Route::get('/bookdetail',function(){
+    return view('bookdetail');
+});
+
+Route::get('/login',function(){
+    return view('login');
+});

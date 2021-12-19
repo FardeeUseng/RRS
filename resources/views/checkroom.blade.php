@@ -80,10 +80,10 @@
       display:flex;
       align-items:center;
    }
-   .nav-manu-items li:nth-child(1){
+   .nav-manu-items li:nth-child(3){
       background-color:#3D5538;
    }
-   .nav-manu-items li:nth-child(1) h3{
+   .nav-manu-items li:nth-child(3) h3{
       color:#F0F8FF;
    }
    .nav-manu-items li:hover,.nav-manu-items a h3:hover{
@@ -123,6 +123,22 @@
    .content-search form{
       width:500px;
    }
+   .content-table th{
+      font-size:30px;
+      font-weight: normal;
+   }
+   .content-table td{
+      font-size:20px;
+      font-weight: normal;
+   }
+   .content-table thead{
+      background-color:#BAC9B8;
+      color:#585858;
+   }
+   .content-table tbody{
+      background-color:#CDD9CC;
+      color:#585858;
+   }
    .footer{
       background-color:#BAC9B8;
    }
@@ -149,36 +165,12 @@
       height:74px;
       justify-content:center;
    }
+
    .footer-link{
       width:350px;
       height:70px;
       align-items:center;
       justify-content:space-between;
-   }
-   .content-footer-bottom{
-      height:50px;
-      align-items:center;
-   }
-   .content-footer-bottom img{
-      width:50px;
-      height:50px;
-   }
-   .content-footer-bottom p {
-      margin:10px;
-      font-size:25px;
-      color:#585858;
-   }
-   .bottom-green{
-      width:45px;
-      height:45px;
-      border:3px solid green;
-      border-radius: 5px;
-   }
-   .bottom-orange{
-      width:45px;
-      height:45px;
-      border:3px solid orange;
-      border-radius: 5px;
    }
 </style>
    
@@ -226,10 +218,10 @@
             <div class="content-container mx-5 my-4">
                <div class="content-header d-flex">
                   <div class="content-header-img ml-5">
-                     <img src="{{asset('img/menu-logo/calendar.png')}}" alt="">
+                     <img src="{{asset('img/menu-logo/meeting-room.png')}}" alt="">
                   </div>
                   <div class="content-header-h ml-4">
-                     <h3>ปฏิทินการจองห้องประชุม</h3>
+                     <h3>รายการห้องประชุม</h3>
                   </div>
                </div>
                <div class="content-search d-flex mt-5 mb-4">
@@ -245,21 +237,49 @@
                   </form>
                </div>
                <div class="content-table bg-dark">
+                  <table class="text-center table table-bordered">
+                     <thead>
+                        <tr>
+                           <th>ลำดับ</th>
+                           <th>ชื่อห้องประชุม</th>
+                           <th>ขนาด</th>
+                           <th>รองรับ</th>
+                           <th>ผู้ดูแล</th>
+                           <th>โทร</th>
+                           <th>สถานะ</th>
+                           <th>รายละเอียด</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td>1</td>
+                           <td>หอประชุมวันม.นอร์ มะทา</td>
+                           <td>ใหญ่</td>
+                           <td>1000</td>
+                           <td>นาย ฟัรดี อูเซ็ง</td>
+                           <td>0650505204</td>
+                           <td class="text-success">ใช้งานได้</td>
+                           <td><a href="#">ดูเพิ่มเติม</a></td>
+                        </tr>
+                        <tr>
+                           <td>2</td>
+                           <td>วิจัย</td>
+                           <td>เล็ก</td>
+                           <td>50</td>
+                           <td>นาย นุรดิน เจ็ะเลาะห์</td>
+                           <td>0650505204</td>
+                           <td class="text-danger">ปิดปรับปรุง </td>
+                           <td><a href="#">ดูเพิ่มเติม</a></td>
+                        </tr>
+                     </tbody>
+                  </table>
                </div>
                <div class="content-footer row">
-                  <div class="content-footer-top">
-                     <div class="content-footer-left col-7">
-                     </div>
-                     <div class="content-footer-right col-5">
-                     </div>
+                  <div class="content-footer-left col-7">
+                     <p class="">จาก 1 ถึง 20 ทั้งหมด 100</p>
                   </div>
-                  <div class="content-footer-bottom d-flex">
-                     <img src="{{asset('img/menu-logo/color-wheel.png')}}" alt="">
-                     <p>สีสถานะห้องประชุม</p>
-                     <div class="bottom-green bg-success"></div>
-                     <p>อนุมัติ</p>
-                     <div class="bottom-orange bg-warning"></div>
-                     <p>รออนุมัติ</p>
+                  <div class="content-footer-right col-5">
+                     <p></p>
                   </div>
                </div>
             </div>
